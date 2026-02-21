@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgelo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Alfa+Slab+One&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://kit.fontawesome.com/a6726e13c6.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header bg-white shadow-md fixed w-full top-0 left-0 p-4.5 z-50 " id="header">
+        <div class="container">
+            <div class="header__wrapper flex items-center justify-between md:flex-col md:max-w-full">
+                <div class="branding md:max-w-full md:flex md:flex-row md:justify-between md:items-center md:w-full lg:pb-4">
+                    <h3 class="transition-all ease-in-out duration-350">
+                        <i class="fa-solid fa-phone"></i>
+                        +1 (800) 312-2121
+                    </h3>
+                    <img class="w-38 md:w-50 lg:w-40 lg:translate-x-10" src="./img/logo-df.svg" alt="Burgelo Logo">
+                    <h3>
+                        <i class="fa-solid fa-location-dot"></i>
+                        172 14th Street, Office 503, NY
+                    </h3>
+                </div>
+
+                <div class="burgir bg-primary p-[0.6rem] rounded-lg flex flex-col justify-center gap-1.5 max-h-max cursor-pointer md:hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="header__nav">
+                    <ul class="flex flex-col items-center text-center h-full pt-32 gap-10 max-w-full md:flex-row md:justify-center md:pt-0 lg:gap-6">
+                        <li>
+                            <a href="javascript:void(0);" onclick="showMenu()" class="home__menu__btn">HOME
+                                <div class="arrows hidden h-max md:inline">
+                                    <i class="fa-solid fa-angle-down arrow-down text-xs"></i>
+                                </div>
+                            </a>
+                            <section class="home__menu hidden z-40 fixed top-28 left-[50%] translate-x-[-50%] bg-white w-332 py-8 shadow-md">
+                                <div class="container home__menu__wrapper flex flex-col gap-8">
+                                    <div class="items flex flex-wrap justify-center gap-8">
+                                        <img src="./img/Frame-1.png" alt="Frame 1">
+                                        <img src="./img/Frame-2.png" alt="Frame 2">
+                                        <img src="./img/Frame-3.png" alt="Frame 3">
+                                        <img src="./img/Frame-4.png" alt="Frame 4">
+                                        <img src="./img/Frame-5.png" alt="Frame 5">
+                                        <img src="./img/Frame-6.png" alt="Frame 6">
+                                    </div>
+                                    <div class="pop__promos grid grid-cols-2 w-full px-4 gap-8">
+                                        <div class="pop__promos__item bg-primary flex items-center justify-center">
+                                            <div class="promo__text text-white">
+                                                <h3 class="text-3xl tracking-[6px] font-normal leading-10">SPECIAL OFFER</h3>
+                                                <h1 class="text-5xl font-[450] leading-10">BUY 2 GET 3</h1>
+                                            </div>
+                                            <img src="./img/coffee.png" alt="Coffee">
+                                            <div class="btn__container">
+                                                <a href="javascript:void(0);" class="btn bg--primary bg-[#333333]">ORDER NOW</a>
+                                            </div>
+                                        </div>
+                                        <div class="pop__promos__item bg-[#333333] flex items-center justify-center gap-4">
+                                            <div class="promo__text text-white">
+                                                <h1 class="text-5xl font-[450] leading-10 tracking-[8px]">GET 25% OFF</h1>
+                                                <h3 class="text-3xl tracking-[11.5px] font-normal leading-10">ON YOUR ORDER</h3>
+                                            </div>
+                                            <div class="btn__container">
+                                                <a href="javascript:void(0);" class="btn bg--primary bg-primary">ORDER NOW</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li><a href="./menu.html">MENU</a></li>
+                        <li><a href="javascript:void(0);">ABOUT</a></li>
+                        <li><a href="javascript:void(0);">SERVICES</a></li>
+                        <li><a href="javascript:void(0);">UPDATES</a></li>
+                        <li><a href="javascript:void(0);">CONTACTS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Banner Section -->
+        <section class="banner pt-23.5 text-white max-w-full md:pt-28 lg:pt-36 animate__animated animate__slideInDown " style="animation-duration: .9s;" id="banner " >
+            <div class="container">
+                <div class=" banner__wrapper bg-[url(/dist/img/banner.webp)] bg-cover bg-center bg-no-repeat max-w-[95%] mx-auto h-[70vh] pt-14 pl-2 md:mx-auto md:bg-size-[80rem] md:pt-40 md:h-200 md:pl-12 lg:max-w-full lg:bg-cover lg:h-175 lg:pt-28 lg:pl-34 ">
+                    <img class="w-72 md:w-80 lg:w-76" src="./img/banner-food.svg" alt="Banner Food">
+                    <div class="banner__text max-w-80 pl-2 md:max-w-max md:translate-x-18 md:-translate-y-14 md:flex md:flex-col md:gap-4 lg:translate-x-19">
+                        <h2 class="text-5xl font-[450] tracking-[0.5rem] md:text-6xl md:tracking-[0.75rem] lg:text-[4rem]">DELIVERY</h2>
+                        <p class="font-[Segoe_UI] mb-6 md:max-w-72">
+                            We're proud to have our burger's history being as long as 25 years!
+                        </p>
+                        <a href="javascript:void(0);" class="btn bg--primary font-[Segoe_UI] font-bold bg-primary px-8 py-3.5 rounded-full tracking-[4px] text-xs transition-all ease-in-out duration-350 md:max-w-max">ORDER NOW</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Summary Section -->
+        <section class="menu__summary md:-mt-14 lg:mt-0">
+            <div class="container">
+                <div class="menu__summary__wrapper md:grid md:grid-cols-3 max-w-[95%] mx-auto lg:max-w-full lg:gap-8">
+                    <!-- Summary Card 1 -->
+                    <div class="menu__summary__card">
+                        <img src="./img/burger.png" alt="Beef Burger">
+                        <div class="card__text">
+                            <div class="price">
+                                <h3>From</h3>
+                                <h1>17</h1>
+                                <h3 class="yellow">$</h3>
+                            </div>
+                            <div class="food-name flex-col md:max-w-50 lg:max-w-full">
+                                <h2>BEEF CLASSIC</h2>
+                                <h1>BURGERS</h1>
+                            </div>
+                            <p>Try this delicious burger containing of two fried parts of a whole-grain bun, a juicy piece of beef, cheese and lettuce.</p>
+                            <a href="javascript:void(0);" class="btn bg--primary menu">+</a>
+                        </div>
+                    </div>
+
+                    <!-- Summary Card 2 -->
+                    <div class="menu__summary__card">
+                        <img src="./img/pasta.png" alt="Pasta">
+                        <div class="card__text">
+                            <div class="price">
+                                <h3>From</h3>
+                                <h1>12.00</h1>
+                                <h3 class="yellow">$</h3>
+                            </div>
+                            <div class="food-name">
+                                <h2>THE BEST</h2>
+                                <h2>PASTA</h2>
+                            </div>
+                            <p>Our pasta with seafood is mixed perfectly with a glass of white wine.</p>
+                            <a href="javascript:void(0);" class="btn bg--primary menu">+</a>
+                        </div>
+                    </div>
+
+                    <!-- Summary Card 3 -->
+                    <div class="menu__summary__card">
+                        <img src="./img/soup1_01-300x300.webp" alt="Season Soup">
+                        <div class="card__text">
+                            <div class="price">
+                                <h3>From</h3>
+                                <h1>13.50</h1>
+                                <h3 class="yellow">$</h3>
+                            </div>
+                            <div class="food-name">
+                                <h2>SEASON SOUP</h2>
+                            </div>
+                            <p>We offer you a special dish - our season soup containing season vegetables.</p>
+                            <a href="javascript:void(0);" class="btn bg--primary menu">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promos Section -->
+        <section class="promos">
+            <div class="container">
+                <div class="promos__wrapper relative flex flex-col gap-2 max-w-[95%] mx-auto lg:flex-row lg:max-w-full">
+                    <!-- Offer 1 -->
+                    <div class="offer bg-[url(/dist/img/offers1.png)] bg-cover flex items-center justify-center h-150 lg:absolute lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:w-[48.5%] lg:h-145" id="offer-1">
+                        <div class="text">
+                            <h2 class="text-[2rem] md:text-[2.5rem]">SPECIAL OFFER</h2>
+                            <h1>BUY 2 GET 3</h1>
+                            <p>Use Our Special Offer Quicker!</p>
+                        </div>
+                    </div>
+
+                    <!-- Offer 2 & 3 -->
+                    <div class="offer__wrapper grid grid-cols-1 gap-2 md:grid-cols-2 lg:flex lg:justify-between lg:w-full">
+                        <div class="offer bg-[url(/dist/img/offers2.png)] relative bg-cover flex flex-col items-center h-screen md:h-165 lg:w-[23.5%] lg:h-145" id="offer-2">
+                            <div class="text absolute bottom-45 md:bottom-25 lg:bottom-15">
+                                <img class="w-44" src="./img/happy.png" alt="Happy Hours">
+                                <div class="inner__text flex flex-col gap-2 -translate-y-5">
+                                    <h2 class="text-[2.5rem]">HOURS</h2>
+                                    <h3>Mon - Fri 1 P.M. - 3 P.M.</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer bg-[url(/dist/img/offers3.png)] relative bg-cover bg-center flex flex-col items-center h-screen md:h-165 lg:w-[23.5%] lg:h-145" id="offer-3">
+                            <div class="text relative top-44.5 md:top-25 lg:top-10">
+                                <img class="w-60" src="./img/15-off.png" alt="15% Off">
+                                <h2 class="text-[1.75rem] translate-x-4 -translate-y-4">FIRST ORDER</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu mb-4">
+            <div class="container p-0">
+                <div class="menu__wrapper">
+                    <!-- Menu Tabs -->
+                    <div class="menu__tabs w-7/8 mx-auto my-6">
+                        <ul class="flex justify-between md:max-w-[50vw] md:mx-auto">
+                            <li id="tab-1" class="tab__nav__link active">
+                                <img src="./img/sub-burger.png" alt="Burgers">
+                                <span>BURGERS</span>
+                            </li>
+                            <li id="tab-2" class="tab__nav__link">
+                                <img src="./img/sub-pasta.png" alt="Pasta">
+                                <span>PASTA</span>
+                            </li>
+                            <li id="tab-3" class="tab__nav__link">
+                                <img src="./img/sub-drinks.png" alt="Drinks">
+                                <span>DRINKS</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Menu Content -->
+                    <div class="menu__content relative ">
+                        <!-- Burgers Tab -->
+                        <div id="tab-1-content" class="menu__content__item active">
+                            <div class="menu__item burger" id="burger-1">
+                                <a href="javascript:void(0);" class="img-food">
+                                    <img src="./img/Bbq-burger_01-300x300.png" alt="BBQ Burger">
+                                </a>
+                                <div class="menu__item__text">
+                                    <a href="javascript:void(0);" class="name-food">
+                                        <h4>BBQ Burger</h4>
+                                    </a>
+                                    <h3>$4.00 - $5.00</h3>
+                                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                                    <a href="javascript:void(0);" class="btn bg--primary add-to-cart menu">
+                                        <i class="fa-solid fa-wrench"></i>
+                                   ADD TO CART
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="menu__item burger" id="burger-2">
+                                <a href="javascript:void(0);" class="img-food">
+                                    <img src="./img/Turkey-Burgers_01-300x300.webp" alt="Turkey Burgers">
+                                </a>
+                                <div class="menu__item__text">
+                                    <a href="javascript:void(0);" class="name-food">
+                                        <h4>Turkey Burgers</h4>
+                                    </a>
+                                    <h3>$3.00 - $3.99</h3>
+                                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                                    <a href="javascript:void(0);" class="btn bg--primary add-to-cart menu">
+                                        <i class="fa-solid fa-wrench"></i>
+                                        ADD TO CART
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="menu__item burger" id="burger-3">
+                                <a href="javascript:void(0);" class="img-food">
+                                    <img src="./img/The-Texas-Squealer-Burger_01-300x300.png" alt="Texas Squealer Burger">
+                                </a>
+                                <div class="menu__item__text">
+                                    <a href="javascript:void(0);" class="name-food">
+                                        <h4>The Texas Squealer Burger</h4>
+                                    </a>
+                                    <h3>$3.88</h3>
+                                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                                    <a href="javascript:void(0);" class="btn bg--primary add-to-cart menu">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        ADD TO CART
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab-1-content-nav" class="slider__nav__container active">
+                            <div id="tab-1-slider-nav" class="tns-nav">
+                                <div class="tns-nav-buttons" data-nav="0" aria-controls="tns1">
+                                    <span></span>
+                                </div>
+                                <div class="tns-nav-buttons" data-nav="1" aria-controls="tns1">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pasta Tab -->
+                        <div id="tab-2-content" class="menu__content__item md:ml-8 md:w-full">
+                            <div class="menu__item pasta" id="pasta-1">
+                                <a href="javascript:void(0);" class="img-food">
+                                    <img src="./img/pasta2_01-300x300.webp" alt="Pasta Neo">
+                                </a>
+                                <div class="menu__item__text">
+                                    <a href="javascript:void(0);" class="name-food">
+                                        <h4>Pasta Neo</h4>
+                                    </a>
+                                    <h3>$15.00</h3>
+                                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                                    <a href="javascript:void(0);" class="btn bg--primary add-to-cart menu">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        ADD TO CART
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="menu__item pasta" id="pasta-2">
+                                <a href="javascript:void(0);" class="img-food">
+                                    <img src="./img/pasta4_01-300x300.png" alt="Pasta Italy">
+                                </a>
+                                <div class="menu__item__text">
+                                    <a href="javascript:void(0);" class="name-food">
+                                        <h4>Pasta Italy</h4>
+                                    </a>
+                                    <h3>$12.00</h3>
+                                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                                    <a href="javascript:void(0);" class="btn bg--primary add-to-cart menu">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        ADD TO CART
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Drinks Tab -->
+                        <div id="tab-3-content" class="menu__content__item">
+                            <div class="menu__item drink" id="drink-1">
+                                <a href="javascript:void(0);" class="img-food">
+                                    <img src="./img/Orange-juice-300x300.webp" alt="Orange Juice">
+                                </a>
+                                <div class="menu__item__text">
+                                    <a href="javascript:void(0);" class="name-food">
+                                        <h4>Orange Juice</h4>
+                                    </a>
+                                    <h3>$1.88</h3>
+                                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                                    <a href="javascript:void(0);" class="btn bg--primary add-to-cart menu">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        ADD TO CART
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="menu__item drink" id="drink-2">
+                                <a href="javascript:void(0);" class="img-food">
+                                    <img src="./img/cola_01-300x300.webp" alt="Cola">
+                                </a>
+                                <div class="menu__item__text">
+                                    <a href="javascript:void(0);" class="name-food">
+                                        <h4>Cola</h4>
+                                    </a>
+                                    <h3>$1.33</h3>
+                                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                                    <a href="javascript:void(0);" class="btn bg--primary add-to-cart menu">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        ADD TO CART
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="menu__item drink" id="drink-3">
+                                <a href="javascript:void(0);" class="img-food">
+                                    <img src="./img/banana-juice_01-300x300.webp" alt="Banana Juice">
+                                </a>
+                                <div class="menu__item__text">
+                                    <a href="javascript:void(0);" class="name-food">
+                                        <h4>Banana Juice</h4>
+                                    </a>
+                                    <h3>$1.50</h3>
+                                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                                    <a href="javascript:void(0);" class="btn bg--primary add-to-cart menu">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        ADD TO CART
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                     
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section class="order">
+            <div class="container">
+                <div class="order__wrapper relative grid grid-cols-1 place-content-center gap-4 max-w-[95%] mx-auto md:grid-cols-3 md:gap-0 lg:max-w-full">
+                    <!-- Step 1 -->
+                    <div class="order__step__card">
+                        <img src="./img/choose1.png" alt="Choose Food" class="choose__img">
+                        <div class="info">
+                            <div class="title__tab">
+                                <img src="./img/fav4.svg" alt="Choose Icon">
+                                <h2>CHOOSE</h2>
+                            </div>
+                            <p>Select food, which you want now the most and don't forget about drinks</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="order__step__card">
+                        <img src="./img/choose2.png" alt="Make Order" class="choose__img">
+                        <div class="info">
+                            <div class="title__tab">
+                                <img src="./img/fav5.svg" alt="Order Icon">
+                                <h2>MAKE AN ORDER</h2>
+                            </div>
+                            <p>Contact us and provide our agent with correct information about your order</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="order__step__card">
+                        <img src="./img/choose3.webp" alt="Receive Food" class="choose__img">
+                        <div class="info">
+                            <div class="title__tab">
+                                <img src="./img/fav6.svg" alt="Receive Icon">
+                                <h2>RECEIVE</h2>
+                            </div>
+                            <p>Get your order as quickly as possible and enjoy your meal</p>
+                        </div>
+                    </div>
+
+                    <img src="./img/choose-vector2.png" alt="" class="curly-line hidden absolute top-18 left-78 w-45 lg:block">
+                    <img src="./img/choose-vector.png" alt="" class="curly-line hidden absolute top-14 right-78 w-38 lg:block">
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="../js/burgir.js"></script>
+    
+</body>
+</html>

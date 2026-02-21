@@ -1,0 +1,349 @@
+@import "tailwindcss";
+
+    @theme {
+        --color-primary: #ffc139;
+        --color-dark: #2b2b2b;
+    }
+    .body{
+        @apply font-[Oswald]
+    }
+    .container {
+        @apply lg:max-w-332 lg:mx-auto;
+    }
+    .header__nav {
+        @apply -right-full transition-all ease-in-out duration-500 bg-dark absolute text-white w-full h-screen top-23.5
+        md:right-0 md:relative md:bg-white md:text-black md:h-max md:top-0 md:max-w-full;
+    }
+    .header__nav.open {
+        @apply right-0;
+    }
+    .header__nav ul li {
+        @apply md:flex md:items-center;
+    }
+    .header__nav ul li:nth-child(2) {
+        @apply lg:hidden;
+    }
+    .header__nav ul li a {
+        @apply transition-all ease-in-out duration-150 md:font-light md:text-sm md:tracking-[2px]
+                lg:font-normal lg:text-[0.8rem] lg:tracking-[1px];
+    }
+    .header__nav ul li a:hover {
+        @apply lg:text-primary;
+    }
+    .header__nav ul li a i{
+        @apply transition-all ease-in-out duration-150;
+    }
+    .header__nav ul li:first-child:hover a i{
+        @apply rotate-180;
+    }
+    .header__nav ul li:first-child:hover .home__menu{
+        @apply lg:block;
+    }
+    .header__nav ul li:first-child:hover .home__menu:hover {
+        @apply lg:block;
+    }
+    .header__wrapper .branding h3 {
+        @apply hidden items-center gap-6 text-sm font-[350] font-["Oswald"] 
+                md:flex
+                lg:font-medium lg:text-xl lg:tracking-[1px];
+    }
+    .header__wrapper .branding h3 i {
+        @apply text-primary text-2xl;
+    }
+    .header__wrapper .branding h3:first-child:hover {
+        @apply lg:text-primary lg:cursor-pointer;
+    }
+
+    .burgir {
+        @apply transition-all ease-in-out duration-500
+        md:hidden;
+        span {
+            @apply w-6 h-[0.2rem] bg-white block transition-all ease-in-out duration-500;
+        }
+    }
+    .burgir.open{
+        @apply bg-transparent;
+        span {
+            @apply bg-black w-4.5;
+        }
+        span:first-child {
+            @apply rotate-225 translate-y-2.5;
+        }
+        span:nth-child(2) {
+            @apply opacity-0;
+        }
+        span:last-child {
+            @apply -rotate-225 -translate-y-2.25;
+        } 
+    }
+
+    .home__menu .items img {
+        @apply w-102.5 transition-all ease-in-out duration-350;
+    }
+    .home__menu .items img:hover {
+        @apply scale-[105%] shadow-lg cursor-pointer;
+    }
+    .home__menu .pop__promos .pop__promos__item {
+        @apply h-32;
+    }
+    .home__menu .pop__promos .pop__promos__item a {
+        @apply text-base font-medium tracking-[2px] font-[Segoe_UI] text-white px-12 py-4 rounded-full transition-all ease-in-out duration-350;
+    }
+    .home__menu .pop__promos .pop__promos__item a:hover {
+        @apply bg-white text-primary;
+    }
+
+    .banner .banner__text a:hover {
+        @apply lg:text-primary lg:bg-white;
+    }
+
+    .menu__summary__card {
+        @apply flex flex-col items-center py-10 justify-center max-w-[95%] mx-auto
+                md:items-start md:justify-start
+                lg:max-w-full;
+    }
+    .menu__summary__card img {    
+        @apply w-90
+        md:w-50
+        lg:w-full;
+    }
+    .menu__summary__card p {
+        @apply text-sm font-[Montserrat] font-light tracking-[1.5px] text-[#333333] leading-7 
+        md:max-w-120 md:mx-auto md:text-sm
+        lg:tracking-[1px] lg:font-[350];
+    }
+    .menu__summary__card:nth-child(2) img {
+        @apply md:w-40 lg:w-75;
+    }
+    .menu__summary__card .card__text {
+        @apply flex flex-col gap-4  
+        md:max-w-160 md:gap-6
+        lg:max-w-full lg:gap-4;                
+    }
+    .menu__summary__card .card__text .price {
+        @apply flex items-end mb-2;
+    }
+    .menu__summary__card .card__text .price h3 {
+        @apply font-[380] tracking-[2px]
+        md:text-xl md:tracking-[3px]
+        lg:text-lg lg:tracking-[2px];
+    }
+    .menu__summary__card .card__text .price h1 {
+        @apply text-[2.5rem] ml-1.5 translate-y-2
+                lg:text-[2.25rem] lg:translate-y-1.5;
+    }
+    .menu__summary__card .card__text .price .yellow, .menu__summary__card .card__text .price h1 {
+        @apply text-primary font-normal
+        md:tracking-[3px];
+    }
+    .menu__summary__card .card__text .price .yellow {
+        @apply md:text-xl;
+    }
+    .menu__summary__card .card__text a {
+        @apply flex w-11 h-11 items-center justify-center text-white text-2xl rounded-full bg-primary transition-all ease-in-out duration-350;
+    }
+    .menu__summary__card .card__text a:hover {
+        @apply lg:bg-black lg:text-primary;
+    }
+    .menu__summary__card .card__text .food-name {
+        @apply flex gap-1
+        md:flex-col md:justify-items-start
+        lg:gap-2;
+    }
+    .menu__summary__card .card__text .food-name h2, .menu__summary__card .card__text .food-name h1 {
+        @apply text-[2rem] font-[375] tracking-[0.25rem] p-0 leading-none
+        md:max-w-54 md:leading-8
+        lg:max-w-full lg:text-[2.2rem];
+    }
+    .menu__summary__card .card__text .food-name h1 {
+        @apply text-[3rem] 
+        md:tracking-[4px] md:leading-16
+        lg:text-[4.2rem];
+    }
+    .menu__summary__card:nth-child(odd) {
+        @apply md:flex-col-reverse;
+    }
+    .menu__summary__card:nth-child(2) .card__text .food-name{
+        @apply lg:flex-row lg:gap-1.5;
+    }
+    .menu__summary__card:nth-child(2) .card__text, .menu__summary__card:last-child .card__text {
+        @apply lg:pl-12;
+    }
+
+    .promos {
+        .container {
+            @apply py-4;
+        }
+        .offer {
+            @apply flex flex-col text-center;
+            h1, h2, h3, p{
+                @apply font-normal leading-none;
+            }
+            h3 {
+                @apply text-[1.15rem];
+            }
+            h2 {
+                @apply tracking-[0.3rem]
+                md:tracking-[0.4rem];
+            }
+            h1 {
+                @apply text-[3.5rem] my-2
+                md:text-[4.25rem] md:my-3;
+            }
+            p {
+                @apply text-[#00000067] font-[Segoe_UI] mt-6 tracking-[0.5px];
+            }
+        }    
+    }
+
+    .menu__content{
+        @apply py-4
+                md:max-w-[95%] md:mx-auto
+                lg:max-w-full;
+        .menu__content__item {
+            @apply flex-col items-center gap-8 hidden
+                    md:flex-row md:gap-4
+                    lg:justify-items-start;
+        }        
+        .menu__content__item.active {
+            @apply flex justify-center;
+        }
+        .menu__item {
+            @apply relative border-gray-200 border-2 max-w-4/5 flex flex-col items-center justify-center py-12 overflow-hidden
+                    md:max-w-[45%] md:px-10
+                    lg:max-w-[25%] lg:pt-14 lg:pb-38 lg:px-15;
+            a {
+                img {
+                    @apply w-48 ;
+                }
+            }
+            .menu__item__text {
+                @apply max-w-4/5 transition-all ease-in-out duration-350
+                        lg:max-w-full lg:absolute lg:left-[50%] lg:translate-x-[-50%] lg:w-[80%] lg:-bottom-14;
+                .name-food {
+                    @apply text-lg transition-all ease-in-out duration-350;
+                }            
+                .name-food:hover {
+                    @apply lg:text-primary;
+                }
+                h3 {
+                    @apply text-2xl text-primary my-2;
+                }
+                p {
+                    @apply text-sm font-light font-[Segoe_UI] text-gray-400 tracking-[0.5px] transition-all ease-in-out duration-350
+                            lg:text-xs lg:translate-y-12;
+                }
+                .add-to-cart {
+                    @apply flex gap-2 items-center max-w-max bg-primary text-white text-sm font-[Segoe_UI] px-8 py-2 rounded-full mt-2 transition-all ease-in-out duration-350
+                            lg:mt-4 lg:tracking-[2px] lg:px-6 lg:translate-y-12 ;
+                }
+                .add-to-cart:hover {
+                    @apply lg:bg-black lg:text-primary;
+                }
+            }
+        }
+        .menu__item:hover {
+            img {
+                @apply opacity-50;
+            }
+            .menu__item__text {
+                @apply lg:bottom-6;
+                p {
+                    @apply lg:translate-y-0
+                }
+                .add-to-cart {
+                    @apply lg:translate-y-0
+                }
+            }
+        }
+    }
+    .menu__content .slider__nav__container {
+        @apply hidden mx-auto max-w-max ;
+    }
+    .menu__content .slider__nav__container.active {
+        @apply block;
+    }
+ 
+    .menu__tabs {
+        ul {
+            li {
+                @apply flex flex-col items-center gap-1.5 border-b-2 border-gray-100 py-2 w-24 ;
+                img {
+                    @apply w-12;
+                }
+                span {
+                    @apply text-xl tracking-[2px];
+                }
+            }
+        }
+        .tab__nav__link {
+            @apply transition-all ease-in-out duration-350;
+        }
+        .tab__nav__link:hover {
+            @apply text-primary cursor-pointer;
+        }
+        .tab__nav__link.active {
+            @apply border-b-primary text-primary;
+        }
+    }
+    .order {
+        .order__step__card {
+            @apply flex flex-col bg-[#f7f6f9] items-center justify-center text-center gap-6 py-9
+                    md:text-start
+                    lg:items-end lg:justify-start lg:py-0 lg:pb-9 lg:gap-0;
+            img {
+                @apply w-95;
+            }
+        }
+        .order__step__card:first-child {
+            @apply lg:gap-4;
+            > img {
+                @apply lg:pr-14 lg:w-105 lg:mt-8;
+            }
+            .info {
+                @apply lg:pl-24;
+            }
+        }
+        .order__step__card:nth-child(2) {
+            .info {
+                @apply lg:pl-22;
+            }
+            .title__tab {
+                @apply lg:gap-1;
+            }
+        }
+        .order__step__card:nth-child(3) {
+            .info {
+                @apply lg:pl-18;
+            }
+        }
+        .info {
+            @apply flex flex-col items-center justify-center tracking-[1px] gap-4
+                    md:items-start md:px-3 md:gap-2;
+            .title__tab {
+                @apply flex flex-col justify-center items-center gap-2
+                        md:flex-row-reverse md:items-start md:gap-4 md:justify-end
+                        lg:items-center;
+                img {
+                    @apply w-16 md:w-12 lg:w-14;
+                }
+                h2 {
+                    @apply text-2xl font-["Oswald"] tracking-[3px] font-light 
+                            md:max-w-30 md:text-[1.75rem] md:font-[350]
+                            lg:max-w-full lg:font-normal lg:text-[2.2rem];
+                }
+            }
+            p {
+                @apply font-[Montserrat] text-black leading-7 tracking-[1.5px] font-extralight text-sm lg:tracking-[1px];
+            }
+        }
+    }
+    .order .order__step__card:last-child img {
+        @apply lg:w-90;
+    }
+    .order .order__step__card:nth-child(odd) {
+        @apply lg:mt-2;
+    }
+    .order .order__step__card:nth-child(even) {
+        @apply md:flex-col-reverse;
+    }
